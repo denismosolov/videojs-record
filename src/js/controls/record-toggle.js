@@ -81,6 +81,7 @@ class RecordToggle extends Button {
                 let down = () => {
                     if (countdown <= 0) {
                         this.player_.countdownOverlay.hide();
+                        this.enable();
                         recorder.start();
                     } else {
                         countdown--;
@@ -89,6 +90,7 @@ class RecordToggle extends Button {
                     }
                 };
 
+                this.disable();
                 this.player_.countdownOverlay.show();
                 this.player_.countdownOverlay.setCountdownValue(countdown);
 
