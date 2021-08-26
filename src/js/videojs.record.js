@@ -157,7 +157,7 @@ class Record extends Plugin {
         if (this.player.options_.controlBar) {
             let customUIElements = ['recordIndicator',
                 'cameraButton', 'recordToggle', 'countdownOverlay'];
-            window.console.log('device button');
+
             if (this.deviceButton) {
                 customUIElements.unshift('deviceButton');
             }
@@ -1707,7 +1707,7 @@ class Record extends Plugin {
             // importing ImageCapture can fail when enabling chrome flag is still required.
             // if so; ignore and continue
             if ((detected.browser === 'chrome' && detected.version >= 60) &&
-                (typeof ImageCapture === typeof Function)) {
+               (typeof ImageCapture === typeof Function)) {
                 try {
                     let imageCapture = new ImageCapture(track);
                     // take picture
