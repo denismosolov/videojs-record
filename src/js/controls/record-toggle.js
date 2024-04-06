@@ -85,8 +85,8 @@ class RecordToggle extends Button {
                         this.enable();
                         recorder.start();
                     } else {
-                        countdown--;
                         this.player_.countdownOverlay.setCountdownValue(countdown);
+                        countdown--;
                         setTimeout(down, COUNTDOWN_INTERVAL);
                     }
                 };
@@ -94,7 +94,6 @@ class RecordToggle extends Button {
                 this.disable();
                 this.player_.addClass('vjs-countdown');
                 this.player_.countdownOverlay.show();
-                this.player_.countdownOverlay.setCountdownValue(countdown);
 
                 down();
             }
