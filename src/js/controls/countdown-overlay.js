@@ -44,7 +44,10 @@ class CountdownOverlay extends Component {
     }
 
     setCountdownValue(value) {
-        this.el().firstChild.innerText = value;
+        const el = this.el();
+        if (el) {
+            el.firstChild.innerText = value;
+        }
     }
 }
 
