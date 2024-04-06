@@ -80,6 +80,7 @@ class RecordToggle extends Button {
                 let countdown = 3;
                 let down = () => {
                     if (countdown <= 0) {
+                        this.player_.removeClass('vjs-countdown');
                         this.player_.countdownOverlay.hide();
                         this.enable();
                         recorder.start();
@@ -91,6 +92,7 @@ class RecordToggle extends Button {
                 };
 
                 this.disable();
+                this.player_.addClass('vjs-countdown');
                 this.player_.countdownOverlay.show();
                 this.player_.countdownOverlay.setCountdownValue(countdown);
 
