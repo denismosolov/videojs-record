@@ -1,8 +1,8 @@
 {
-  "name": "videojs-record",
-  "version": "4.5.0",
-  "description": "A video.js plugin for recording audio/video/image files.",
-  "author": "Collab",
+  "name": "videojs-record-countdown",
+  "version": "4.5.1",
+  "description": "A video.js plugin for recording audio/video/image files + countdown.",
+  "author": "Denis Mosolov",
   "license": "MIT",
   "readmeFilename": "README.md",
   "bugs": {
@@ -20,9 +20,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/collab-project/videojs-record.git"
+    "url": "https://github.com/denismosolov/videojs-record.git"
   },
   "scripts": {
+    "clone": "git clone -b countdown-4-5-0 https://github.com/denismosolov/videojs-record.git",
     "clean": "rimraf dist",
     "build": "npm run clean && npm run build:dev && npm run build:min && npm run build:language",
     "build:main": "webpack --config ./build-config/webpack.dev.main.js",
